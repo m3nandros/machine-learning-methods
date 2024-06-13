@@ -1,0 +1,231 @@
+% ----------------------------------------------------------------
+% AMS-LaTeX Paper ************************************************
+% **** -----------------------------------------------------------
+%\documentclass[14pt, openany, twoside]{book}
+\documentclass[12pt, openany, oneside]{book}
+%\usepackage[14pt]{extsizes}
+\textwidth=16cm \oddsidemargin=0pt \evensidemargin=0pt
+\usepackage{amsmath,amsthm,amssymb}
+\let\amslrcorner\lrcorner
+\usepackage[T1,T2A]{fontenc}
+%\usepackage[cp1251]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{amscd}
+\usepackage{oldgerm}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{tikz-cd}
+\usepackage{comment}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{extpfeil} 
+\usepackage{cmap}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{tensor}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{derivative}
+%\usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[left=30mm, top=20mm, right=30mm, bottom=20mm,nohead, includefoot,footskip=35pt]{geometry}
+%\usepackage[left=30mm, top=20mm, right=15mm, bottom=20mm, nohead, includefoot,footskip=35pt]{geometry}
+% Межстрочный интервал = 1.5pt
+%\usepackage{setspace}
+%\onehalfspacing
+
+% Абзацный отступ = 1.25см
+\usepackage{indentfirst}
+\setlength\parindent{12.5mm}{\tiny }
+
+\usepackage{fancyhdr}
+\pagestyle{plain}
+\fancyhf{}
+\fancyfoot[R]{\centering\thepage}
+
+\usepackage{amscd}
+\usepackage{oldgerm}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage{tikz-cd}
+\usepackage{comment}
+%\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{extpfeil} 
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{babel}
+\definecolor{linkcolor}{HTML}{799B03} % цвет ссылок
+\definecolor{urlcolor}{HTML}{799B03} % цвет гиперссылок
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+\vfuzz2pt % Don't report over-full v-boxes if over-edge is small
+\hfuzz2pt % Don't report over-full h-boxes if over-edge is small
+% THEOREMS -------------------------------------------------------
+\newtheorem{thm}{Теорема}[section]
+\newtheorem{exercise}[thm]{Упражнение}
+\newtheorem*{thm1}{Теорема}
+\newtheorem{cor}[thm]{Следствие}
+\newtheorem{lem}[thm]{Лемма}
+\newtheorem{zad}[thm]{Задача}
+\newtheorem{prop}[thm]{Предложение}
+\newtheorem{prop*}[thm]{*Предложение}
+\theoremstyle{definition}
+\newtheorem{dfn}[thm]{Определение}
+\newtheorem{lemma}{Лемма} % чтобы заработало окружение лемм
+%\newtheorem{dfn}{Определение}[section]
+\newtheorem{dfn*}{*Определение}[section]
+\newtheorem*{defn1}{Определение}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Замечание}
+\newtheorem{example}{Пример}[section]
+\numberwithin{equation}{section}
+\renewcommand{\proofname}{Доказательство}
+\numberwithin{equation}{section}
+
+% MATH -----------------------------------------------------------
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\gen}[1]{\left\langle#1\right\rangle}
+\newcommand{\dpr}[2]{\left(#1\shortmid#2\right)}% Dot product
+\newcommand{\eps}{\varepsilon}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\coker}{\mathrm{coker}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\codim}{\mathrm{codim}}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\0}{\varnothing}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\CN}{\mathbb{C}}
+\newcommand{\HN}{\mathbb{H}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\M}{\mathrm{M}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RN}{\mathbb{R}}
+\newcommand{\tr}{\mathrm{t}}
+\newcommand{\trace}{\mathrm{tr}}
+\newcommand{\Aut}{\mathrm{Aut}}
+\newcommand{\spec}{\mathrm{Spec}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\OG}{\mathrm{O}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\m}{\mathrm{M}}
+\newcommand{\un}{\mathrm{U}}
+\newcommand{\UG}{\mathrm{U}}
+\newcommand{\re}{\operatorname{Re}}
+%\DeclareMathOperator{\re}{re}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\ovl}{\overline}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\mf}[1]{{\mathfrak{#1}}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\sm}{\setminus\set{0}}
+\newcommand{\PS}{\operatorname{P}}
+\DeclareMathOperator{\noreq}{\trianglelefteq}
+\newcommand{\Co}{\mathbb{C}}
+\begin{document}
+	\newgeometry{left=15mm, top=20mm, right=15mm, bottom=20mm, nohead, nofoot}
+	\begin{titlepage}
+		\begin{center}
+			
+			\textbf{МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ}
+			
+			\textbf{РОССИЙСКОЙ ФЕДЕРАЦИИ}
+			
+			\textbf{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ АВТОНОМНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ}
+			
+			\textbf{<<Пермский государственный национальный исследовательский университет>>}
+			
+			\vspace{5mm}
+			
+			\textbf{Механико-математический факультет}
+			
+			\textbf{Кафедра фундаментальной математики}
+			
+			\vspace{10mm}
+			
+			\textbf{\large Вихляев Егор Сергеевич} %\\[8mm]
+			
+			\vspace{10mm}
+			% Название
+			\textbf{\large ОТЧЁТ О ЛАБОРАТОРНОЙ РАБОТЕ 3 \\ ПО МАШИННОМУ ОБУЧЕНИЮ\\}
+
+			
+			\vspace{15mm}
+			%Уровень образования: бакалавриат\\
+			%Направление 01.03.01 <<Математика>>\\
+			%Основная образовательная программа СВ.5005.2015
+			%«Прикладная математика, фундаментальная информатика и программирование»\\
+			%Профиль «Исследование и проектирование систем управления\\ и обработки сигналов»\\[25mm]
+			\begin{flushright}
+				\begin{minipage}[t]{0.65\textwidth}
+					\raggedleft{{Выполнил:} \\
+						студент 3 курса очной формы обучения направления подготовки 01.03.01 -- Механико-математический, направление -- <<Математика>>}
+					
+					%\vspace{10mm}
+					
+					%{Рецензент:} \\
+					%профессор, кафедра компьютерных технологий \\и систем, д.ф. - м.н. Веремей~Евгений Игоревич
+				\end{minipage}
+			\end{flushright}
+			
+			\vspace{5mm}
+			% Научный руководитель, рецензент
+			
+			
+			\vfill
+			{Пермь}
+			\par{\the\year{} г.}
+		\end{center}
+	\end{titlepage}
+	\restoregeometry
+	%\setcounter{page}{2}
+	\tableofcontents
+	\newpage
+	
+	\chapter*{Введение} % звездочка снимает нумерование главы.
+	\addcontentsline{toc}{section}{Введение} % делаем введение видимым в оглавлении
+	
+	Актуальность: В современном образовании все чаще применяется форма работы, где учащиеся больше занимаются самостоятельной деятельностью, например, научно-исследовательской работой. Это одно из направлений обновления образования, где инициатива зачастую исходит от учителя, который организует и руководит исследованиями учеников, а также несет ответственность за их результаты. Во многих высших учебных заведениях также ожидается, что студенты будут более самостоятельны в своей работе, поэтому научно-исследовательская деятельность становится важным инструментом для развития качеств, таких как самостоятельность, гибкость мышления и любознательность.
+	
+	Цель: Разработка плана исследования для школьников на тему «История теории гомологий».
+	
+	Задачи работы:
+	\begin{enumerate} 
+		\item Изучить проведение научно-исследовательской работы у школьников.
+		\item Изучить историю становления теории гомологий.
+		\item Разработать план исследования для школьников.
+	\end{enumerate}
+	
+	Объект исследования: школьники 10-11 классов.
+	
+	Предмет исследования: Теория гомологий.
+	
+	Место прохождения практики: кафедра фундаментальной математики ПГНИУ.
+	
+	Сроки прохождения практики: 01.09.2023-25.12.2023
+	
+	\chapter{Проблема первая: коллинеарные признаки}
+	\textbf{Def:} Просмотрев матрицу корреляции, можно заметить, что у нас есть несколько признаков, которые сильно коррелируют друг с другом: temp и atemp (коррелируют по своей природе), два windspeed (разница в ед. измерения). Такие признаки называются коллинеарными. Как увидим в дальнейшем, это негативно сказывается на обучении линейной модели.
+	
+	Для начала проводим масштабирование или стандартизацию признаков: из каждого признака вычитаем его среднее и делим на стандартное отклонение. Это делается с помощью метода $scale()$.
+
+	Но прежде этого, мы должны перемешать выборку. Это потребуется для дальнейшей кросс-валидации. Это делается методом $shuffle()$.
+	
+	\textbf{Def: Кросс-валидация} — это метод, предназначенный для оценки качества работы модели, который широко применяется в машинном обучении.	
+	
+	
+	
+	\begin{thebibliography}{99}\addcontentsline{toc}{chapter}{Литература}
+		\bibitem{fomenko-wife} Борисович Ю.Г., Близняков Н.М., Израилевич Я.А., Фоменко Т.Н. Введение в топологию: Учеб. пособие для вузов. - 1-е изд. - М,: Высш. школа, 1980. - 295 с.
+		\bibitem{Vasiliev} Васильев В.А. Топология для младшекурсников. - 2-е изд. - М.: МЦНМО, 2019. - 160 с.
+		\bibitem{Vick} Вик Дж. У. Теория гомологий. Введение в алгебраическую топологию. - 1-е изд. - М.: МЦНМО, 2005. - 288 с.
+		\bibitem{Dubr, Nov, Fomenko} Дубровин Б.А., Новиков С.П., Фоменко А.Т. Современная геометрия: Методы и приложения. Т.3: Теория гомологий. - 1-е изд. - М.: Эдиториал УРСС, 2001. - 288 с.
+		\bibitem{fomenko-fuks} Фоменко А.Т., Фукс Д.Б. Курс гомотопической топологии. - 1-е изд. - М,: Наука. Гл. ред. физ.-мат. лит., 1989. - 528 с.
+		\bibitem{Steenrod, Eilenberg} Eilenberg S., Steenrod N. Foundations Of Aglebraic Topology. - 1st изд. - Princeton, New Jersey: Princeton University Press, 1952. - 403 с.
+		\bibitem{poincare} Poincare H. Analysis situs. - Ed. 1. - Paris: Journal de l'Ecole Polytechnique, 1895. - 123 с.
+	\end{thebibliography}
+	
+\end{document}
